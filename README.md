@@ -19,10 +19,9 @@ npm run build --report
 ```
 ##项目简介
 
-项目使采用vue-cli+vue-router+axios+elementUI+webpack 实现外卖订单系统（前端），
-- 实现了商品的增删改以及模拟订单提交
+项目使采用vue-cli+vuex+elementUI+webpack 实现记事本，
+- 实现了笔记的添加、编辑、收藏和取消收藏
 
-- 这个demo中没有加入后端模板，直接用axios从远程服务器获取商品数据
 
 ##演示
-[](./pos.gif)
+![](https://github.com/fenglin-pan/vue_Note/blob/master/note.gif)
