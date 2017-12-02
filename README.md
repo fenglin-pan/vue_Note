@@ -17,5 +17,12 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+##项目简介
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+项目使采用vue-cli+vue-router+axios+elementUI+webpack 实现外卖订单系统（前端），
+- 实现了商品的增删改以及模拟订单提交
+
+- 这个demo中没有加入后端模板，直接用axios从远程服务器获取商品数据
+
+##演示
+[](./pos.gif)
