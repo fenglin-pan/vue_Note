@@ -13,7 +13,7 @@
       <div>
           <ul>
               <!-- 点击一列 颜色变化 使用：class="{select:selectItem == index }"和@click='changeColor(index)' 点击一列 切换index 实现变色-->
-              <li v-for='(item,index) in notes' :class="{'show':activatNote == item,select:selectItem == index }" @click="updateActiveNotes(item);changeColor(index)">
+              <li v-for='(item,index) in notes' :class="{'show':activeNote == item,select:selectItem == index }" @click="updateActiveNotes(item);changeColor(index)">
                   {{item.text}}
               </li>
           </ul>
@@ -23,8 +23,8 @@
 </template>
 
 <script>
-    // import store from '../vuex/store'
-    import {mapActions} from 'vuex'
+    import store from '../vuex/store'
+    import {mapMutation,mapActions} from 'vuex'
     export default{
         data(){
             return {
@@ -32,14 +32,9 @@
                 selectItem:0
             }
         },
-        // created(){
-        //         for(let i =0; i<this.$ref.li.length;i++){
-        //             this.$ref.li.style.class='select'
-        //         }
-        // },
         computed:{
-            activated(){
-                return this.$store.getters.activatNote
+            activeNote(){
+                return this.$store.getters.activeNote
             },
             notes(){
                 if(this.show=='all'){
@@ -59,7 +54,8 @@
             changeColor(index){
                 this.selectItem = index
             }
-        }
+        },
+        store
     }
 </script>
 

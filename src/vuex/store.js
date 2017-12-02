@@ -32,8 +32,8 @@ const mutations = {
     //toggle favorite notes
     TOGGLE_FAVORITE(state){
         state.activeNote.favorite=!state.activeNote.favorite;
-        if(state.activeNote.favorite) alert('收藏成功')
-        else if(!state.activeNote.favorite) alert('取消收藏')
+        // if(state.activeNote.favorite) alert('收藏成功')
+        // else if(!state.activeNote.favorite) alert('取消收藏')
     },
     //delete notes
     DELETE_NOTE(state){
